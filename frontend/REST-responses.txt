@@ -1,0 +1,53 @@
+REST responses
+
+
+GET /pools
+
+[
+	{
+		id: 1,
+		topic: 'Expresiones Matematicas'
+	},
+	{
+		id: 2,
+		topic: 'Esttructura de scripting'
+	}
+]
+
+GET /pools/:id
+
+{
+	id: 1,
+	topic: 'Expresiones Matematicas',
+	questions: [
+		{
+			id: 15,
+			enunciado: 'texto',
+			code: 'print(a+b)',
+			variables: [
+				{ key: 'a', value: [] },
+				{ key: 'b', value: [] },
+			]
+			pool_id: 1,
+			user_id: 5,
+			user: {
+				id: 5,
+				name: 'Nombre del men'
+			}
+		},
+		{
+			id: 17,
+			enunciado: 'texto para el enunciado',
+			code: 'print(z)',
+			variables: [
+				{ key: 'z', value: "hello" }
+			]
+			pool_id: 1,
+			user_id: 5,
+			user: {
+				id: 5,
+				name: 'Nombre del men'
+			}
+		},
+	]
+}
